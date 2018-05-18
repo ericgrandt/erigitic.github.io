@@ -1,0 +1,33 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'PT Sans', sans-serif;
+}
+
+#header {
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+}
+
+#header > #header-overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(28, 35, 41, 0.85);
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#header-overlay > #header-container {
+	text-align: center;
+	color: white;
+	width: 420px;
+}
+
+#header-container h1 {
+	font-size: 48px;
+	font-weight: bold;
+}
