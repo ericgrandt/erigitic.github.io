@@ -1,0 +1,12 @@
+footer {
+	display: flex;
+	background-color: #1C2329;
+	color: white;
+	min-height: 100px;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .social-icons {
+	font-size: 1.5rem;
+}

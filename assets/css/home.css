@@ -1,0 +1,220 @@
+/**
+ * Intro Styles
+ */
+#page-home .intro {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+#page-home .intro .overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(28, 35, 41, 0.85);
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#page-home .intro .intro-container {
+	width: 278px;
+}
+
+#page-home .intro-container h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#page-home .intro .availability-button {
+	outline: 0 !important;
+    box-shadow: none !important;
+	font-size: 0.85rem;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0.125rem solid #DA044B;
+	border-radius: 15px;
+}
+
+#page-home .intro .availability-button:hover {
+	background-color: #DA044B;
+	cursor: pointer;
+}
+
+#page-home .intro .learn-more {
+	position: absolute;
+	bottom: 5px;
+	color: white;
+	text-decoration: none;
+}
+
+#page-home .intro .learn-more:hover {
+	cursor: pointer;
+}
+
+#page-home .intro .learn-more p {
+	font-size: 0.85rem;
+	margin-bottom: 0;
+	line-height: 0.5rem;
+}
+
+@media (min-width: 576px) {
+	#page-home .intro .intro-container {
+		width: 420px !important;
+	}
+
+	#page-home .intro-container h1 {
+		font-size: 3rem !important;
+	}
+}
+
+/**
+ * About Section
+ */
+#page-home #about {
+	padding-bottom: 9.25rem;
+}
+
+#page-home #about .summary {
+	max-width: 600px;
+	margin-bottom: 2.5rem;
+}
+
+/**
+ * Expertise Section
+ */
+#page-home #expertise {
+	margin-top: -149px;
+}
+
+#page-home #expertise .col:not(:last-of-type) {
+	margin-bottom: 10px;
+}
+
+#page-home #expertise .card {
+	text-align: center;
+	color: black;
+	min-width: 290px;
+	max-width: 350px;
+	height: 100%;
+	border-color: #5C6A75;
+	border-radius: 10px;
+}
+
+#page-home #expertise .card-title {
+	font-weight: bold;
+}
+
+#page-home #expertise .card .card-secondary .card-title {
+	font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+	#page-home #expertise .col {
+		margin-bottom: 0 !important;
+	}
+}
+
+/**
+ * Tools Section
+ */
+#page-home #tools p:last-of-type {
+	margin-bottom: 0;
+}
+
+/**
+ * Experience Section
+ */
+#page-home #experience .item {
+	line-height: 1.25rem;
+	margin-bottom: 20px;
+}
+
+#page-home #experience .item p {
+	margin-bottom: 0;
+}
+
+/**
+ * Project Section
+ */
+#page-home #projects .project {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 150px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.25rem;
+	color: white;
+}
+
+#page-home #projects .col:not(:last-of-type) {
+	margin-bottom: 10px;
+}
+
+#page-home #projects .project img, #page-home #projects .project i {
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.project#total-economy {
+	background: linear-gradient(to bottom right, #FFCD29, #D7EF6C)
+}
+
+.project#rover-rescue {
+	background: linear-gradient(to bottom right, #2C6599, #3EB5BB)
+}
+
+.project#threed-rooms {
+	background: linear-gradient(to bottom right, #C8102E, #D43592)
+}
+
+@media (min-width: 1024px) {
+	#page-home #projects .col {
+		margin-bottom: 0 !important;
+	}
+}
+
+/**
+ * Contact Section
+ */
+#page-home #contact .container {
+	max-width: 600px;
+}
+
+#page-home #contact input, #page-home #contact textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#page-home #contact input, #page-home #contact textarea, #page-home #contact button {
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+}
+
+#page-home #contact input::placeholder, #page-home #contact textarea::placeholder {
+	color: #D9D9D9;
+}
+
+#page-home #contact input {
+	height: 40px;
+}
+
+#page-home #contact textarea {
+	display: block;
+	resize: none;
+	height: 150px;
+}
+
+#page-home #contact button {
+	width: 100px;
+	height: 40px;
+	background-color: white;
+}
