@@ -175,6 +175,10 @@
 	background: linear-gradient(to bottom right, #C8102E, #D43592)
 }
 
+.project#money-clip {
+	background: linear-gradient(to bottom right, #18E77F, #69F0AE)
+}
+
 @media (min-width: 1024px) {
 	#page-home #projects .col {
 		margin-bottom: 0 !important;
