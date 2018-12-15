@@ -1,0 +1,42 @@
+---
+title: Blog | Eric Grandt
+page-id: blog
+layout: page
+---
+
+<div class="page-header">
+	<div class="content">
+		<div class="container">
+			<h5 class="title">Most Recent</h5>
+
+			<!-- Get most recent post -->
+			{% assign post = site.posts.first %}
+
+			<a href="{{ post.url }}" class="recent-post">
+				<h1>{{ post.title }}</h1>
+				<h5 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h5>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	{% assign psize = site.posts | size %}
+	{% if psize == 1 %} 
+		<p class="text-center">More posts are on the way.</p>
+	{% else %}
+		<div class="row">
+			{% for post in site.posts offset:1 %}
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a href="{{ post.url }}" class="blog-card card">
+						<div class="post-img card-img-top"></div>
+						<div class="card-body">
+							<p class="card-text"><small class="text-muted">{{ post.tags[0] }}</small></p>
+							<h5 class="card-title">{{ post.title }}</h5>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>

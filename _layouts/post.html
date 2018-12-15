@@ -1,5 +1,17 @@
 ---
 layout: default
 ---
+<div class="page-header">
+	<a href="{{ site.baseurl }}/blog" class="back-button"><i class="fas fa-caret-left mr-2"></i> All Posts</a>
+	<div class="content container">
+		<h5 class="tag">{{ page.tags[0] }}</h5>
+		<h1>{{ page.title }}</h1>
+		<h5 class="post-date">{{ page.date | date: "%B %-d, %Y" }}</h5>
+	</div>
+</div>
 
-{{ content }}
+<article>
+	<div class="container">
+		{{ content }}
+	</div>
+</article>

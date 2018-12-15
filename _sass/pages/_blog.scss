@@ -1,24 +1,67 @@
 #page-blog {
+	& {
+		background-color: $blog-background-primary;
+		height: 100%;
+		color: black;
+	}
+
 	.page-header {
-		width: 100%;
-		height: 500px;
-		background: url("../img/background.jpg");
-		margin-bottom: 20px;
+		& {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			background: url("../img/background.jpg");
+			color: white;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.content {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			background: rgba(28, 35, 41, 0.85);
+			height: 100%;
+			width: 100%;
+		}
+
+		.title {
+			font-weight: 300;
+			font-size: $font-size-large;
+			margin-bottom: 50px;
+		}
+
+		.recent-post {
+			& {
+				
+				height: 100%;
+				width: 100%;
+			}
+
+			.post-date {
+				color: rgba(255, 255, 255, 0.75);
+				font-size: $font-size-medium;
+				font-weight: 400;
+			}
+		}
 	}
 
 	.blog-card {
-		width: 100%;
-		min-width: 200px;
-		-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-		-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-		margin: 1rem;
-		padding: 0;
-
-		& .post-image {
+		& {
+			text-align: center;
+		}
+		
+		.post-img {
 			width: 100%;
-			height: 50%;
-			background-color: rgb(144, 139, 194);
+			height: 150px;
+			background-color: rgb(75, 75, 82);
+		}
+
+		.card-text .text-muted {
+			text-transform: capitalize;
 		}
 	}
 }

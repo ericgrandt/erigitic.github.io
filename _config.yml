@@ -1,2 +1,4 @@
 title: Eric Grandt
 markdown: kramdown
+
+permalink: /blog/:categories/:year/:month/:day/:title/
