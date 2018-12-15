@@ -15,11 +15,11 @@ Before working on the issues, I found it to be beneficial to do some housekeepin
 
 I've neglected to use labels, even though they are such a simple thing to use. Despite their simplicity, they do such a good job at organizing the issues and giving you some insight into them. Without even opening one, you can tell if it's a bug, feature request, high priority, etc. Now I will occasionally add labels to issues, but only sometimes. Here's the state of some of my issues before labeling them all:
 
-![Before Labels]({{ site.url }}/assets/img/blog/before-labels.png)
+![Before Labels]({{ site.baseurl }}/assets/img/blog/before-labels.png)
 
 As you can see, I didn't use labels all that much. So the first thing I set out to do was add the appropriate labels to every single issue. While I was at it, I closed any duplicate/similar issues and stated the duplicate issue number before closing it. The reasoning behind this is because it provides future reference as to why the issue was closed and where to continue the discussion if needed. This is something that I like to do and highly recommend doing. I had about three pages of issues to go through and label and close if a duplicate. After all of that, I'm now greeted with a beautiful list of labeled issues:
 
-![After Labels]({{ site.url }}/assets/img/blog/after-labels.png)
+![After Labels]({{ site.baseurl }}/assets/img/blog/after-labels.png)
 
 Best of all, these issues can now be filtered by their labels. This proves very useful when you want to grab a list of all the bugs that need to be fixed. Again, labels are such a simple thing, but they are incredibly powerful when used and shouldn't be neglected as I've done for so long.
 
@@ -27,7 +27,7 @@ Best of all, these issues can now be filtered by their labels. This proves very 
 
 Since I'm hosting my repository on GitHub, I'm able to use their built-in project boards. An alternative to GitHub projects is [Trello](https://trello.com), another fantastic tool for keeping track of tasks. As I brought up earlier, the list of issues can be intimidating and you may not know where to begin with them. GitHub projects help turn that long list of issues into much smaller sections so you can organize them even more. They also gives you a better idea of the path you want to take when it comes to working on the issues.
 
-![Projects]({{ site.url }}/assets/img/blog/projects.png)
+![Projects]({{ site.baseurl }}/assets/img/blog/projects.png)
 
 I used the project boards for keeping track of new features and feature reworks. Each feature got their own project board, and each one of these boards contained issues relating to that feature. Bug related issues were never added to a board as they should be a priority and fixed before adding new features.
 

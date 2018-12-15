@@ -1,4 +1,5 @@
 title: Eric Grandt
 markdown: kramdown
 
+url: https://ericgrandt.com
 permalink: /blog/:categories/:year/:month/:day/:title/
