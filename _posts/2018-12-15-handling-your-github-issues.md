@@ -15,11 +15,11 @@ Before working on the issues, I found it to be beneficial to do some housekeepin
 
 I've neglected to use labels, even though they are such a simple thing to use. Despite their simplicity, they do such a good job at organizing the issues and giving you some insight into them. Without even opening one, you can tell if it's a bug, feature request, high priority, etc. Now I will occasionally add labels to issues, but only sometimes. Here's the state of some of my issues before labeling them all:
 
-![Before Labels]({{ site.baseurl }}/assets/img/blog/before-labels.png)
+![Before Labels]({{ site.baseurl }}/assets/img/before-labels.png)
 
 As you can see, I didn't use labels all that much. So the first thing I set out to do was add the appropriate labels to every single issue. While I was at it, I closed any duplicate/similar issues and stated the duplicate issue number before closing it. The reasoning behind this is because it provides future reference as to why the issue was closed and where to continue the discussion if needed. This is something that I like to do and highly recommend doing. I had about three pages of issues to go through and label and close if a duplicate. After all of that, I'm now greeted with a beautiful list of labeled issues:
 
-![After Labels]({{ site.baseurl }}/assets/img/blog/after-labels.png)
+![After Labels]({{ site.baseurl }}/assets/img/after-labels.png)
 
 Best of all, these issues can now be filtered by their labels. This proves very useful when you want to grab a list of all the bugs that need to be fixed. Again, labels are such a simple thing, but they are incredibly powerful when used and shouldn't be neglected as I've done for so long.
 
