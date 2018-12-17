@@ -3,3 +3,6 @@ markdown: kramdown
 
 url: https://ericgrandt.com
 permalink: /blog/:categories/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-seo-tag
