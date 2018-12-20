@@ -4,7 +4,7 @@
 			position: relative;
 			width: 100%;
 			height: 400px;
-			background-color: #3E4958;
+			background-color: $post-background;
 			color: white;
 			text-align: center;
 			margin-bottom: 20px;
@@ -63,6 +63,51 @@
 
 		h3 {
 			margin-top: 30px;
+		}
+
+		table {
+			margin: 1rem 0;
+		}
+
+		th, td {
+			padding: 0 1rem;
+			text-align: center;
+		}
+
+		.spoiler {
+			& {
+				filter: blur(5px);
+				transition: -webkit-filter 0.15s 0.15s;
+			}
+
+			&:hover {
+				filter: blur(0);
+			}
+		}
+	}
+
+	section.support {
+		& {
+			text-align: center;
+			padding: 50px 0;
+			background-color: $post-background;
+			color: white;
+		}
+
+		.items img {
+			& {
+				height: 36px;
+				border-radius: 3px;
+				margin-top: 20px
+			}
+
+			&:first-of-type {
+				margin-right: 20px;
+			}
+
+			&:last-of-type {
+				margin-left: 20px;
+			}
 		}
 	}
 }

@@ -11,4 +11,9 @@ $(document).ready(function () {
 			scrollTop: $('#contact').offset().top
 		}, 500);
 	});
+
+	$('.spoiler').on( 'click', function (e) {
+		$(this).toggleClass('spoiler');
+		e.stopPropagation();
+	});
 });
