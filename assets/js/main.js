@@ -13,7 +13,7 @@ $(document).ready(function () {
 	});
 
 	$('.spoiler').on( 'click', function (e) {
-		$(this).toggleClass('spoiler');
+		$(this).toggleClass('active');
 		e.stopPropagation();
 	});
 });
