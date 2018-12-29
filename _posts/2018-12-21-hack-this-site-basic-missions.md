@@ -5,7 +5,7 @@ page-id: post
 tags: [walkthrough, ethical hacking]
 ---
 
-I've been really into penetration testing recently, and for fun, I've been working my way through all the missions on [Hack This Site](https://www.hackthissite.org/). I thought it would be helpful to write up in-depth walkthroughs for each of the basic and realistic missions for those that are stuck and looking for an explanation, rather than just the solution.
+I've been really into penetration testing recently, and for fun, I've been working my way through all of the missions on [Hack This Site](https://www.hackthissite.org/). I thought it would be helpful to write up in-depth walkthroughs for each of the basic and realistic missions for those that are stuck and looking for an explanation, rather than just the solution.
 
 In this first walkthrough, we're going to go over each of the basic missions in a single post as they're fairly straightforward.
 
