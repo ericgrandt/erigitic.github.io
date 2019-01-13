@@ -43,6 +43,7 @@ This mission can be completed in the exact same way as Basic 4.
 
 I love this mission! It requires a bit more work than the previous ones and a bit more thought. You'll notice you have the encrypted password given to you, which obviously needs to be decrypted to pass the mission. As well as that, you are given a form that allows you to encrypt your own values using the same encryption method used on the password. With that form and enough test inputs, you can figure out exactly how the encryption process works. Let's test a few:
 
+{:.simple-table}
 | Input | Output |
 |-------|--------|
 | ab    | ac     |
