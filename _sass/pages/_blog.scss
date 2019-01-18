@@ -57,7 +57,24 @@
 		.post-img {
 			width: 100%;
 			height: 150px;
-			background-color: rgb(75, 75, 82);
+
+			&.walkthrough {
+				background: #536976;
+				background: -webkit-linear-gradient(to top, #292E49, #536976);
+				background: linear-gradient(to bottom, #292E49, #536976);
+			}
+
+			&.open-source {
+				background: #56CCF2;
+				background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);
+				background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+			}
+
+			&.opinion {
+				background: #fceabb;
+				background: -webkit-linear-gradient(to top, #f8b500, #fceabb);
+				background: linear-gradient(to bottom, #f8b500, #fceabb);
+			}
 		}
 
 		.card-text .text-muted {

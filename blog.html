@@ -29,7 +29,7 @@ layout: page
 			{% for post in site.posts offset:1 %}
 				<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 					<a href="{{ post.url }}" class="blog-card card">
-						<div class="post-img card-img-top"></div>
+						<div class="post-img card-img-top {{ post.tags[0] | slugify }}"></div>
 						<div class="card-body">
 							<p class="card-text"><small class="text-muted">{{ post.tags[0] }}</small></p>
 							<h5 class="card-title">{{ post.title }}</h5>
