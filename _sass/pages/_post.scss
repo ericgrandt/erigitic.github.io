@@ -10,6 +10,16 @@
 			margin-bottom: 20px;
 		}
 
+		h1 {
+			& {
+				font-size: $font-size-x-large;
+			}
+
+			@media (min-width: 768px) {
+				font-size: $font-size-xx-large;
+			}
+		}
+
 		.back-button {
 			position: absolute;
 			font-weight: 300;
@@ -55,7 +65,7 @@
 		img {
 			display: block;
 			margin: 20px auto;
-			width: auto;
+			max-width: 100%;
 
 			&.border {
 				border: 1px solid rgba(0, 0, 0, 0.1);
@@ -73,6 +83,12 @@
 		h5 {
 			font-weight: bold;
 			margin-top: 1rem;
+		}
+
+		.post-container {
+			max-width: 750px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
 		table.simple-table {
