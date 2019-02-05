@@ -37,6 +37,12 @@ h4 {
 	margin-bottom: 0;
 }
 
+blockquote {
+	border-left: 2px solid $background-primary;
+	padding-left: 10px;	
+	margin: 25px 0;
+}
+
 .text-yellow {
 	color: $text-yellow;
 }
