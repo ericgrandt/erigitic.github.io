@@ -53,12 +53,15 @@
 	}
 
 	article {
+		& {
+			font-size: $font-size-post;			
+		}
+
 		a {
 			text-decoration: underline;
 		}
 
 		p {
-			font-size: $font-size-post;
 			line-height: 1.6;
 		}
 
@@ -83,6 +86,10 @@
 		h5 {
 			font-weight: bold;
 			margin-top: 1rem;
+		}
+
+		li:not(:last-child) {
+			padding-bottom: 1rem;
 		}
 
 		.post-container {
