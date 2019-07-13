@@ -5,6 +5,14 @@
 		color: black;
 	}
 
+	h4 {
+		font-size: 1.3rem;
+	}
+
+	.subtext {
+		line-height: 1.75rem;
+	}
+
 	.page-header {
 		& {
 			position: relative;
@@ -13,7 +21,6 @@
 			background: url("../img/background.jpg");
 			color: white;
 			text-align: center;
-			margin-bottom: 50px;
 		}
 
 		.content {
@@ -36,7 +43,7 @@
 
 		.recent-post {
 			& {
-				
+
 				height: 100%;
 				width: 100%;
 			}
@@ -49,38 +56,53 @@
 		}
 	}
 
-	.blog-card {
+	.blog-post {
 		& {
+			border-bottom: 1px solid $post-separator-color;
+			margin: 60px 0;
+			padding-bottom: 60px;
+		}
+
+		&:last-child {
+			border: none;
+			padding-bottom: 0;
+		}
+
+		.title {
+			font-weight: 500;
 			text-align: center;
 		}
-		
-		.post-img {
-			width: 100%;
-			height: 150px;
 
-			&.walkthrough {
-				background: #38496F;
-			}
-
-			&.open-source {
-				background: #5B95FF;
-			}
-
-			&.opinion {
-				background: #F9B58E;
-			}
-
-			&.write-up {
-				background: #FD7777;
-			}
-
-			&.security {
-				background: #6f383b;
-			}
+		.post-info {
+			margin-bottom: 20px;
 		}
 
-		.card-text .text-muted {
-			text-transform: capitalize;
+		.post-excerpt {
+			margin-top: 30px;
+			text-align: left;
+			font-size: 1.2rem;
+			line-height: 1.6;
+		}
+	}
+
+	.read-more-arrow {
+		color: $icon-color;
+		margin: 0 5px;
+	}
+
+	.pagination {
+		& {
+			margin-bottom: 20px;
+		}
+
+		.previous, .next {
+			color: $icon-color;
+			flex: 1;
+			padding: 0 15px;
+		}
+
+		.next {
+			text-align: right;
 		}
 	}
 }

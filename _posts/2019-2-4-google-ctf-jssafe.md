@@ -5,8 +5,6 @@ page-id: post
 tags: [write-up]
 ---
 
-# Google CTF: Beginners Quest - JS Safe
-
 > Well it's definitely the 90s. Using what was found in the mysterious .ico file, you extract the driver for the Aluminum-Key Hardware password storage device. Let's see what it has in store.
 
 For this CTF, we are given an HTML file that displays a text field. After taking a quick peek at the code, we can see that the text we put into this field goes through a client-side authentication process. As well as that, the hash algorithm being used is `SHA-256`. This must mean that whatever we input into the field gets hashed and then compared to the hash of the actual password. This also means that there must be a way to retrieve the actual password hash.
@@ -77,7 +75,7 @@ This time it's actually executing a function called `digest`. An array containin
 undefined ƒ Uint8Array() { [native code] } ArrayBuffer(32) {CONTENTS REMOVED TO SAVE SPACE} "x"
 ```
 
-That digest function hashed our password and we can see that hashed password in the ArrayBuffer above. We're getting close at this point. Once again, let's follow the new variable we got, `Ѿ`. 
+That digest function hashed our password and we can see that hashed password in the ArrayBuffer above. We're getting close at this point. Once again, let's follow the new variable we got, `Ѿ`.
 
 The output we get from following `Ѿ` shows that each value of our hashed password is being retrieved one by one and is stored in `ѿ`. Let's follow `ѿ` now and we'll receive a bunch of results similar to
 

@@ -5,8 +5,6 @@ page-id: post
 tags: [security]
 ---
 
-# Securing Your Digital Life
-
 Recently, I was tasked with helping a family member deal with having their email hacked. The worst part about this was that getting into their email allowed this individual to then gain access to their Amazon account and completely take it over. This could have easily escalated out of control, but I was thankfully able to stop it from going further than that. For a more widescale example, with the [recent release of hundreds of millions of leaked usernames and passwords](https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/), there's a good chance you could have been affected by some sort of data breach that contains your emails and passwords. With that said, I'd like to share some ways to help you secure your digital lives, so you can prevent this from happening to you and better prevent your passwords from being leaked in these data breaches.
 
 Some of what I'll be talking about will require some setup and commitment, but it's well worth it considering the alternative.
@@ -29,7 +27,7 @@ Keep in mind that 2FA codes can still be retrieved through phishing, which I tal
 
 ## Phishing
 
-Phishing is a [very common](https://blog.barkly.com/phishing-statistics-2018) way people get their login credentials or other sensitive information stolen. The most common medium for phishing attacks is through emails, which are usually disguised as coming from legitimate sources. There are a few things you can do to lower the chances of getting phished or preventing it all together: 
+Phishing is a [very common](https://blog.barkly.com/phishing-statistics-2018) way people get their login credentials or other sensitive information stolen. The most common medium for phishing attacks is through emails, which are usually disguised as coming from legitimate sources. There are a few things you can do to lower the chances of getting phished or preventing it all together:
 
 1. Never click on links or download attachments within emails unless you are 100% sure they are coming from a legitimate source. Emails from family, friends, and coworkers can still be phishing emails if they themselves have had their emails compromised. If you're still unsure, and it's possible, talk to the person who sent you the email in order to confirm the link/attachment is safe.
 2. If it's too good to be true, it probably is. Just delete or ignore these emails.
@@ -45,7 +43,7 @@ It's almost a guarantee you'll stumble across a virus sooner or later. So before
 
 If you've got wifi setup at your home or business, ensure it's password protected. The last thing you want is some malicious individual using your wireless network for nefarious purposes. There's a small chance of this actually happening, but regardless, it's better to have a password protected network than not.
 
-In terms of public wifi, never use unsecured public wifi unless absolutely necessary. It's incredibly simple for someone to see, in plaintext, the information you submit to websites. This includes your login credentials and other sensitive information, such as credit card numbers. This goes for unsecured home networks as well. 
+In terms of public wifi, never use unsecured public wifi unless absolutely necessary. It's incredibly simple for someone to see, in plaintext, the information you submit to websites. This includes your login credentials and other sensitive information, such as credit card numbers. This goes for unsecured home networks as well.
 
 Simply put, always password protect your wifi networks and only use password protected wifi.
 

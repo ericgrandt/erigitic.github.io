@@ -5,10 +5,8 @@ page-id: post
 tags: [write-up]
 ---
 
-# Google CTF: Beginners Quest - Router UI
-
 > Using the domain found on the hardened aluminum key, you make your way on to the OffHub router. A revolutionary device that simplifies your life. You're at the UI page, but attempting to brute force the password failed miserably. If we could find an XSS on the page then we could use it to steal the root user session token. In case you find something, try to send an email to wintermuted@googlegroups.com. If you claim your link includes cat pictures, I'm sure Wintermuted will click it. I hope Chrome's XSS filter will not block the exploit though.
-> 
+>
 > https://router-ui.web.ctfcompetition.com/
 
 In this challenge, we are shown a login form and need to find a way to steal the session token from the root user. We're given a hint about finding XSS somewhere on the page, but Chrome's XSS filter makes this a bit more difficult. Once we find a way to bypass this filter, we can send off an email to the root user containing a link and hope that they'll click it. From the challenge description, if we say the link has cat pictures, there's a good chance they'll do exactly that.
@@ -49,7 +47,7 @@ Once the email is sent off, you should receive a confirmation within a few secon
 
 `GET /cookie.html?flag=Try%20the%20session%20cookie;%20session=Avaev8thDieM6Quauoh2TuDeaez9Weja HTTP/1.1`
 
-Looks as if the root user had two cookies: 
+Looks as if the root user had two cookies:
 
 `flag=Try the session cookie`
 
