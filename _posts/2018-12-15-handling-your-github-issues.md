@@ -15,7 +15,7 @@ Before working on the issues, I find it beneficial to do some housekeeping to ge
 
 I've neglected to use labels in a lot of my projects, even though they're such a simple thing to use. Despite their simplicity, they do such a great job at organizing the issues and giving you some insight into them. Without even opening one, you can tell if it's a bug, feature request, high priority, etc. So the first thing to do is add the appropriate labels to every single issue. Best of all, these issues can now be filtered by their labels. This proves very useful when you want to grab a list of all the bugs that need to be fixed. Again, labels are such a simple thing, but they are incredibly useful when it comes to organization and they shouldn't be neglected.
 
-### Close Duplicate Issue
+### Close Duplicate Issues
 
 If you have an open source project, the chance of duplicate issues popping up is fairly likely. While you're going through labeling issues, you should also close any duplicate issues you find. After closing the duplicate issue, you should post a comment within it stating the duplicate issue number. The reasoning behind this is because it provides future reference as to why the issue was closed and where to continue the discussion if needed. This is something that I like to do and highly recommend doing.
 
