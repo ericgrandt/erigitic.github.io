@@ -4,10 +4,9 @@ markdown: kramdown
 url: https://ericgrandt.com
 permalink: /blog/:categories/:year/:month/:day/:title/
 
-pagination:
-  enabled: true
-  per_page: 10
+paginate: 5
+paginate_path: /blog/page:num
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-paginate-v2
+  - jekyll-paginate
