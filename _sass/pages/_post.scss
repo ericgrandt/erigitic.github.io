@@ -7,7 +7,7 @@
 			background-color: $post-background;
 			color: white;
 			text-align: center;
-			margin-bottom: 20px;
+			margin-bottom: 2.25rem;
 		}
 
 		h1 {
@@ -54,7 +54,7 @@
 
 	article {
 		& {
-			font-size: $font-size-post;			
+			font-size: $font-size-post;
 		}
 
 		a {
@@ -62,7 +62,15 @@
 		}
 
 		p {
-			line-height: 1.6;
+			line-height: 1.8;
+		}
+
+		p, ol, pre {
+			margin-bottom: 2.25rem;
+		}
+
+		pre {
+			max-height: 30em;
 		}
 
 		img {
