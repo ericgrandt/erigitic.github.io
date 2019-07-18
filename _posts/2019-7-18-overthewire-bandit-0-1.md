@@ -5,7 +5,7 @@ page-id: post
 tags: [walkthrough, writeup]
 ---
 
-	The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+> The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
 
 I highly recommend using a virtual machine or, even better, a Docker container running Linux when doing these challenges, and really any other CTFs like this. This helps to avoid messing anything up on your host machine. Though this is just a recommendation, not a requirement. If you're interested in using Docker for this, I created a [gist](https://gist.github.com/Erigitic/4b11297f02169a996c24f52729b58e01) with a Dockerfile and instructions on running it.
 
