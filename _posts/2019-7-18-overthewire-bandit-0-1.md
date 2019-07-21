@@ -24,7 +24,7 @@ We use `-p` to set the port number and `-l` to set the username. For this level,
 
 Once you execute this command, you may be presented with a message stating the authenticity of the host can't be established and a question asking `Are you sure you want to continue connecting (yes/no)?`, go ahead and type yes. You shouldn't have to do this every time. You'll then need to enter the password which they give you: `bandit0`. If everything was correct, you'll now be logged in and ready to start working on the level.
 
-According to the level description, we have to look in the `readme` file for the next levels password. To make sure the file is actually within our current working directory, we can run `ls` to get a list of the files and directories. This will confirm that a `readme` file is indeed present. Now to print out the contents of that file we can make use of the cat command: `cat readme`. The password for the next level (Level 1) will be displayed and you can move on to the next level.
+According to the level description, we have to look in the `readme` file for the next level's password. To make sure the file is actually within our current working directory, we can run `ls` to get a list of the files and directories. This will confirm that a `readme` file is indeed present. Now to print out the contents of that file we can make use of the cat command: `cat readme`. The password for the next level (Level 1) will be displayed and you can move on to the next level.
 
 I highly recommend you keep a document of all of the passwords you find, just in case you ever need to go back to a previous level.
 
