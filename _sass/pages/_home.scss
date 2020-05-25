@@ -1,3 +1,56 @@
 #page-home {
-	
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: -0.75rem;
+    }
+
+    a.card {
+        & {
+            background-color: $background-secondary;
+            border: none;
+            border-radius: 0px 0px 5px 5px;
+            margin: 0.75rem;
+        }
+
+        &, &:hover {
+            color: inherit;
+            text-decoration: inherit;
+            transition: all 300ms ease;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            transition: all 300ms ease;
+        }
+
+        &.category-security {
+            border-top: 3px solid #FC4850;
+        }
+
+        &.category-tutorial {
+            border-top: 3px solid rgb(72, 129, 252);
+        }
+
+        &.category-opinion {
+            border-top: 3px solid rgb(72, 252, 237);
+        }
+
+        &.category-write-up {
+            border-top: 3px solid rgb(252, 180, 72);
+        }
+
+        &.category-opensource {
+            border-top: 3px solid rgb(252, 72, 162);
+        }
+
+        .card-title {
+            color: $font-primary;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 300;
+            margin-bottom: 0px;
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
 }

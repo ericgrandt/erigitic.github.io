@@ -2,7 +2,7 @@
 layout: post
 title: Selectable GridView in Flutter
 page-id: post
-tags: [walkthrough]
+tags: [tutorial]
 ---
 
 I've recently needed a more stylish and better functioning alternative to a dropdown list for my Flutter project and found that a GridView works perfectly for this. We can use the GridView to allow us to create a list of selectable items that we can then use wherever we need it. It's super simple to do and works flawlessly.
