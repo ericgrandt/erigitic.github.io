@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ericgrandt.com
+Token: 0788905d937320a5dc57baad47613973ad90f3c9aa0e02b0f1bec809f8c0b88f
