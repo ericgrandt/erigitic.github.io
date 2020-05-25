@@ -2,7 +2,7 @@ title: Eric Grandt
 markdown: kramdown
 
 url: https://ericgrandt.com
-permalink: /post/:title/
+permalink: /blog/:title/
 
 plugins:
   - jekyll-seo-tag
