@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include header.html %}
+
+{% if page.tag %}
+	{% assign posts = site.tags[page.tag] %}
+{% else %}
+	{% assign posts = site.posts %}
+{% endif %}
+
+<div class="container">
+	<h1>{{ page.header }}</h1>
+	{% if posts.size %}
+		<div class="grid-container">
+			{% for post in posts %}
+				<a href="{{ post.url }}" class="card category-{{ post.tags[0] | remove: " " }}">
+					<div class="card-body d-flex flex-column align-items-center justify-content-center">
+						<h5 class="card-title">{{ post.title }}</h5>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p id="noPosts" class="text-center">No posts</p>
+	{% endif %}
+</div>

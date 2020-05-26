@@ -28,12 +28,12 @@ As well as that, Flutter is widget-based, by which I mean you can create a compl
 For example, if you want to create a UI with three rows of content, you can do so very easily:
 
 <script src="https://gist.github.com/Erigitic/8441f0e378aec6e6a0e2e286f5cc06b4.js"></script>
-![Simple UI]({{ site.baseurl }}/assets/img/blog/simple-ui.png){:class="border"}
+![Simple UI]({{ site.url }}/assets/img/blog/simple-ui.png){:class="border"}
 
 It's that easy to build your UI. But this isn't very pretty, so we can take this another step further by modifying the colors, text, etc. Let's make use of the theme data above to accomplish this:
 
 <script src="https://gist.github.com/Erigitic/5bf5b5a8ceb47d615eafbf79387f282c.js"></script>
-![Themed UI]({{ site.baseurl }}/assets/img/blog/themed-ui.png){:class="border"}
+![Themed UI]({{ site.url }}/assets/img/blog/themed-ui.png){:class="border"}
 
 This looks good and will look even better once more content is added to each of these sections. I think this goes to show how simple it is to develop a nice user interface in no time at all using Flutter.
 

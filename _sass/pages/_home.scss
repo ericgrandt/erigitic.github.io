@@ -1,7 +1,11 @@
 #page-home {
+    #noPosts {
+        color: $font-secondary;
+    }
+
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         margin: -0.75rem;
     }
 
@@ -25,23 +29,23 @@
         }
 
         &.category-security {
-            border-top: 3px solid #FC4850;
+            border-top: 3px solid $border-category-security;
         }
-
+        
         &.category-tutorial {
-            border-top: 3px solid rgb(72, 129, 252);
+            border-top: 3px solid $border-category-tutorial;
         }
-
+        
         &.category-opinion {
-            border-top: 3px solid rgb(72, 252, 237);
+            border-top: 3px solid $border-category-opinion;
         }
-
+        
         &.category-write-up {
-            border-top: 3px solid rgb(252, 180, 72);
+            border-top: 3px solid $border-category-write-up;
         }
-
+        
         &.category-opensource {
-            border-top: 3px solid rgb(252, 72, 162);
+            border-top: 3px solid $border-category-opensource;
         }
 
         .card-title {
