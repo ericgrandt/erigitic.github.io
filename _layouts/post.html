@@ -3,28 +3,14 @@ layout: default
 ---
 {% include header.html %}
 
-<!-- <div class="page-header">
-	<a href="{{ site.url }}/blog" class="back-button"><i class="fas fa-caret-left mr-2"></i> All Posts</a>
-	<div class="content container">
-		<h5 class="tag">{{ page.tags[0] }}</h5>
+<main>
+	<div id="postInformation">
+		<h6 id="tag">{{ page.tags[0] | upper }}</h6>
 		<h1>{{ page.title }}</h1>
-		<h5 class="post-date">{{ page.date | date: "%B %-d, %Y" }}</h5>
+		<h6 class="post-date">{{ page.date | date: "%B %-d, %Y" }}</h6>
 	</div>
-</div>
 
-<article>
-	<div class="container post-container">
+	<div class="container">
 		{{ content }}
 	</div>
-</article>
-
-<section class="support">
-	<div class="container">
-		<h1>Thanks for reading!</h1>
-		<h3>If you're interested, consider supporting my work.</h3>
-		<div class="items">
-			<a href="https://www.buymeacoffee.com/FzJSUhTH6" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-			<a href="https://www.patreon.com/bePatron?u=223814" target="_blank"><img src="{{ site.url }}/assets/img/become_a_patron_button.png" alt="Become a Patron"></a>
-		</div>
-	</div>
-</section> -->
+</main>
