@@ -5,9 +5,9 @@ page-id: post
 tags: [tutorial]
 ---
 
-This will be a very in-depth and long article in the hopes of making sense of everything. Though having a basic understanding of hex, binary, and bitwise operations would be beneficial. Each section is split by the file we're working in, and split again by the function we're working on to hopefully make it easier to follow. Once we're done with each file, I'll provide a link to the full code, with comments.
-
 One of the simplest ways to learn how to make your own emulators is to start with a Chip-8 emulator. With only 4KB of memory and 36 instructions, you can be up and running with your very own Chip-8 emulator in less than a day. As well as that, you'll be supplied with the knowledge necessary to move on to bigger, more in-depth emulators.
+
+This will be a very in-depth and long article in the hopes of making sense of everything. Though having a basic understanding of hex, binary, and bitwise operations would be beneficial. Each section is split by the file we're working in, and split again by the function we're working on to hopefully make it easier to follow. Once we're done with each file, I'll provide a link to the full code, with comments.
 
 For this entire article, we'll be referencing the [Chip-8 technical reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#2.2) by Cowgod which explains every detail of Chip-8. You can use whatever language you want to make the emulator, though this article will be using JavaScript. I feel it's the simplest language to use for first-time emulator creation considering it provides support for rendering, keyboard, and sound right out of the box. The most important thing is that you understand the process of emulation, so use whatever language you are most comfortable with.
 
