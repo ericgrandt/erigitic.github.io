@@ -19,7 +19,20 @@ One thing I absolutely love that makes UI development simple is that Flutter giv
 
 Here's a snippet of the theme data that I'm using for my app:
 
-<script src="https://gist.github.com/Erigitic/d4cfec4d8fb812047cd82726d8b1444f.js"></script>
+`themeDataExample.dart`
+```dart
+ThemeData(
+    brightness: Brightness.light,
+    backgroundColor: Colors.blueGrey[50],
+    primarySwatch: Colors.blueGrey,
+    primaryColor: Colors.blueGrey[50],
+    primaryColorDark: Colors.grey[900],
+    accentColor: Colors.grey[900],
+    fontFamily: 'Poppins',
+    primaryTextTheme: Typography.blackCupertino,
+    accentTextTheme: Typography.whiteCupertino,
+),
+```
 
 This snippet does quite a few different things: sets the brightness, background color, primary and accent text colors, font family, and the primary and accent text themes. This is just a portion of what you can do with theme data. You can also set the theme of input fields, icons, and pretty much everything else. Flutter will follow this theme data throughout your app, giving it a consistent look without having to do any extra work.
 
@@ -27,12 +40,93 @@ As well as that, Flutter is widget-based, by which I mean you can create a compl
 
 For example, if you want to create a UI with three rows of content, you can do so very easily:
 
-<script src="https://gist.github.com/Erigitic/8441f0e378aec6e6a0e2e286f5cc06b4.js"></script>
+`simpleUI.dart`
+```dart
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+            title: Text(widget.title),
+            centerTitle: true,
+            elevation: 0,
+        ),
+        body: Column(
+            children: [
+                Container(
+                    height: 215.0,
+                    child: Text('Top content'),
+                ),
+                Expanded(
+                    child: Text('This content takes up any remaining space'),
+                ),
+                Container(
+                    height: 75.0,
+                    child: SizedBox.expand(
+                        child: FlatButton(
+                            onPressed: () { 
+                                // Do something on press
+                            },
+                            child: Text('PRESS ME'),
+                        ),
+                    ),
+                ),
+            ],
+        ),
+    );
+}
+```
 ![Simple UI]({{ site.url }}/assets/img/blog/simple-ui.png){:class="border"}
 
 It's that easy to build your UI. But this isn't very pretty, so we can take this another step further by modifying the colors, text, etc. Let's make use of the theme data above to accomplish this:
 
-<script src="https://gist.github.com/Erigitic/5bf5b5a8ceb47d615eafbf79387f282c.js"></script>
+`themedUI.dart`
+```dart
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+            title: Text(
+                widget.title,
+            ),
+            backgroundColor: Theme.of(context).accentColor,
+            textTheme: Theme.of(context).accentTextTheme,
+            centerTitle: true,
+            elevation: 0,
+        ),
+        body: Column(
+            children: [
+                Container(
+                color: Theme.of(context).accentColor,
+                height: 215.0,
+            ),
+            Expanded(
+                child: Text('This content takes up any remaining space'),
+            ),
+            Container(
+                height: 75.0,
+                decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        colors: [const Color(0xFF5252F5), const Color(0xFF3134EF)],
+                        tileMode: TileMode.repeated,
+                    ),
+                ),
+                child: SizedBox.expand(
+                    child: FlatButton(
+                        onPressed: () { 
+                            // Do something on press
+                        },
+                        child: Text(
+                            'PRESS ME',
+                            style: Theme.of(context).accentTextTheme.button,
+                        ),
+                    ),
+                ),
+            ),
+        ],
+    );
+}
+```
 ![Themed UI]({{ site.url }}/assets/img/blog/themed-ui.png){:class="border"}
 
 This looks good and will look even better once more content is added to each of these sections. I think this goes to show how simple it is to develop a nice user interface in no time at all using Flutter.
@@ -43,15 +137,100 @@ To end this section, Flutter also offers hot reload which allows you to make cha
 
 Backend development is more up my alley, and I am very pleased with how easy it is to make data-driven apps using Flutter and Dart. Thanks to singletons in Dart, and the [sqlflite package](https://pub.dartlang.org/packages/sqflite), creating a class for handling and working with your database is incredibly simple.
 
-<script src="https://gist.github.com/Erigitic/aa31c1aed85f6d3acec86ad836b51627.js"></script>
+`database.dart`
+```dart
+import 'dart:io';
+import 'package:sqflite/sqflite.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart';
+
+class DBProvider {
+    DBProvider._();
+
+    static final DBProvider db = DBProvider._();
+    Database _database;
+
+    Future<Database> get database async {
+        if (_database != null) {
+            return _database;
+        }
+
+        _database = await initDB();
+        return _database;
+    }
+
+    initDB() async {
+        Directory documentsDir = await getApplicationDocumentsDirectory();
+        String path = join(documentsDir.path, 'my_app.db');
+
+        return await openDatabase(path, version: 1, onOpen: (db) {
+        }, onCreate: (Database db, int version) async {
+            await db.execute('''
+                CREATE TABLE user(
+                    id INTEGER PRIMARY KEY,
+                    name TEXT NOT NULL
+                )
+            ''');
+        });
+    }
+}
+```
 
 With that small amount of code, you're up and running with an SQLite database and a table. From here, we can create a model for each object that we can then use to query the database. In the case of the example above, we need a model for the user. Here's a magnificent tool that makes converting JSON to a model a breeze: [https://app.quicktype.io/#l=dart](https://app.quicktype.io/#l=dart). For the user, the model would look like this:
 
-<script src="https://gist.github.com/Erigitic/e7a7b9315959d3cec0c44ab0bf0a3a2b.js"></script>
+`user_model.dart`
+```dart
+import 'dart:convert';
+
+User userFromJson(String str) {
+    final jsonData = json.decode(str);
+    return User.fromJson(jsonData);
+}
+
+String userToJson(User data) {
+    final dyn = data.toJson();
+    return json.encode(dyn);
+}
+
+class User {
+    int id;
+    String name;
+
+    User({
+        this.id,
+        this.name,
+    });
+
+    factory User.fromJson(Map<String, dynamic> json) => new User(
+        id: json["id"],
+        name: json["name"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "id": id,
+        "name": name,
+    };
+}
+```
 
 With this, we can now convert back and forth between a JSON string and a User object. Creating a user and getting a user from the database can now be done like so:
 
-<script src="https://gist.github.com/Erigitic/8f27c215287a7b526d82d78c90dc77f7.js"></script>
+`queries.dart`
+```dart
+newUser(User user) async {
+    final db = await database;
+    var res = await db.insert('user', user.toJson());
+
+    return res;
+}
+
+getUser(int id) async {
+    final db = await database;
+    var res = await db.query('user', where: 'id = ?', whereArgs: [id]);
+
+    return res.isNotEmpty ? User.fromJson(res.first) : Null;
+}
+```
 
 With that, we can set up a form that creates a new user, as well as displays that user's information somewhere else in the app. This is a very simple example of what can be done, but I hope this shows how effortless it is to set up a backend for your app and display that data to your user.
 

