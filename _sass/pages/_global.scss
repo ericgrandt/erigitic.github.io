@@ -1,95 +1,46 @@
 html, body {
-	width: 100%;
-	font-family: 'Lato', sans-serif;
-	font-size: $font-size-base;
+    background-color: $background-primary;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size-base;
 }
 
-textarea, select, input, button {
-	outline: none;
-}
-
-a, a:hover {
-	color: inherit;
-	text-decoration: none;
-}
-
-.no-margin {
-	margin: 0;
+h1, h2, h3, h4, h5 {
+    color: $font-primary;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2rem;
 }
 
 h1 {
-	font-size: $font-size-xx-large;
-	font-weight: 900;
+    font-size: $font-size-xx-large;
+    text-align: center;
 }
 
 h2 {
-	font-size: $font-size-x-large;
-	font-weight: bold;
+    font-size: $font-size-x-large;
+    text-align: left;
 }
 
 h3 {
-	font-size: $font-size-large;
-	font-weight: bold;
+    font-size: $font-size-large;
+    text-align: left;
 }
 
 h4 {
-	font-size: $font-size-medium;
-	margin-bottom: 0;
+    font-size: $font-size-medium;
+    text-align: left;
 }
 
-blockquote {
-	border-left: 2px solid $background-primary;
-	padding-left: 10px;	
-	margin: 25px 0;
+h5 {
+    font-size: $font-size-small;
+    text-align: left;
 }
 
-.text-yellow {
-	color: $text-yellow;
-}
-
-.text-blue {
-	color: $text-blue;
-}
-
-/**
- * Forms
- */
-button {
-	& {
-		width: 100px;
-		height: 40px;
-		cursor: pointer;
-		border: 0.125rem solid $button-outline-color;
-		border-radius: 3px;
-		background-color: rgba(0, 0, 0, 0);
-		color: white;
-	}
-
-	&:hover {
-		background-color: $button-hover-color;
-	}
-}
-
-/**
- * Pills
- */
-.pill {
-	display: inline-block;
-	padding: 5px 10px;
-	border: 1px solid #D9D9D9;
-	border-radius: 10px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	font-size: 1rem;
-}
-
-/**
- * Navigation
- */
-.navbar-nav {
-	flex-direction: row !important;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-	padding: 0.5rem;
+h6 {
+    color: $font-accent;
+    font-size: $font-size-extra-small;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
 }

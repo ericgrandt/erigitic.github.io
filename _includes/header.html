@@ -1,18 +1,15 @@
-<header class="header{{include.class}}">
-	<nav class="navbar navbar-expand-lg">
-		<ul class="navbar-nav mx-auto">
-			<li class="nav-item">
-				<a href="#about" class="nav-link">About</a>
-			</li>
-			<li class="nav-item">
-				<a href="#experience" class="nav-link">Experience</a>
-			</li>
-			<li class="nav-item">
-				<a href="#projects" class="nav-link">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a href="{{ site.baseurl }}/blog" class="nav-link">Blog</a>
-			</li>
-		</ul>
-	</nav>
-</header>
+<nav id="header" class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="{{ site.url }}">
+        <img src="{{ site.url }}/assets/img/logo.svg" width="40" height="40" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-4">
+            <a href="{{ site.url }}" id="allCategory" class="nav-item nav-link">All Posts</a>
+            <a href="{{ site.url }}/category/tutorial" id="tutorialCategory" class="nav-item nav-link">Tutorials</a>
+            <a href="{{ site.url }}/category/security" id="securityCategory" class="nav-item nav-link">Security</a>
+        </div>
+    </div>
+</nav>

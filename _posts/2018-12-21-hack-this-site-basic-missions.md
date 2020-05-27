@@ -2,7 +2,7 @@
 layout: post
 title: Hack This Site&#58; Basic Missions
 page-id: post
-tags: [walkthrough, ethical hacking]
+tags: [tutorial, ethical hacking]
 ---
 
 I've been really into penetration testing recently, and for fun, I've been working my way through all of the missions on [Hack This Site](https://www.hackthissite.org/). I thought it would be helpful to write up in-depth walkthroughs for each of the basic and realistic missions for those that are stuck and looking for an explanation, rather than just the solution.
@@ -53,38 +53,37 @@ I love this mission! It requires a bit more work than the previous ones and a bi
 | 012   | 024    |
 | 0125  | 0248   |
 
-Hopefully, the table above and your own tests give you a decent idea as to what's going on. If not, click the "View Explanation" button below for a more in-depth explanation.
+Hopefully, the table above and your own tests give you a decent idea as to what's going on.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#spoilerCollapse" aria-expanded="false" aria-controls="collapseExample">
-	View Explanation
-</button>
-<div class="collapse" id="spoilerCollapse">
-<div class="card card-body" markdown="1">
+---
+
+Here's a more in-depth explanation:
+
 Each unencrypted character, converted to their ASCII equivalent, is incremented depending on their position. The first character is incremented by zero, the second character incremented by 1, the third character by 2, and so forth. Here's an [ASCII table](http://www.asciitable.com/) to show you the ASCII equivalent of each character. To decrypt the password, we just work backwards.
 
-The encrypted password is `063d;;7;`. Converted to ASCII:
+```
+The encrypted password is "063d;;7;". Converted to ASCII:
 
-`48 54 51 100 59 59 55 59`
+48 54 51 100 59 59 55 59
 
 Now let's use the ASCII values above to decrypt the password:
 
-`48 - 0 = 48 converted to character = 0`
+48 - 0 = 48 converted to character = 0
 
-`54 - 1 = 53 converted to character = 5`
+54 - 1 = 53 converted to character = 5
 
-`51 - 2 = 49 converted to character = 1`
+51 - 2 = 49 converted to character = 1
 
-`100 - 3 = 97 converted to character = a`
+100 - 3 = 97 converted to character = a
 
-`59 - 4 = 55 converted to character = 7`
+59 - 4 = 55 converted to character = 7
 
-`59 - 5 = 54 converted to character = 6`
+59 - 5 = 54 converted to character = 6
 
-`55 - 6 = 49 converted to character = 1`
+55 - 6 = 49 converted to character = 1
 
-`59 - 7 = 52 converted to character = 4`
-</div>
-</div>
+59 - 7 = 52 converted to character = 4
+```
 
 ## Basic 7
 

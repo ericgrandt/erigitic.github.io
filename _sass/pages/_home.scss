@@ -1,186 +1,66 @@
 #page-home {
-	& {
-		background-color: $background-primary;
-		color: white;
-	}
+    h1.category {
+        margin: 30px 0px 50px 0;
+    }
 
-	.intro {
-		& {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			width: 100%;
-			text-align: center;
-		}
+    #noPosts {
+        color: $font-secondary;
+    }
 
-		.availability-button {
-			& {
-				outline: 0 !important;
-				box-shadow: none !important;
-				background-color: rgba(0, 0, 0, 0);
-				border: 0.125rem solid $button-outline-color;
-				border-radius: 15px;
-				font-size: 0.85rem;
-				margin-top: 10px;
-			}
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin: -0.75rem;
+    }
 
-			&:hover {
-				background-color: $button-hover-color;
-				cursor: pointer;
-			}
-		}
+    a.card {
+        & {
+            background-color: $background-secondary;
+            border: none;
+            border-radius: 0px 0px 5px 5px;
+            margin: 0.75rem;
+        }
 
-		.learn-more {
-			& {
-				position: absolute;
-				bottom: 5px;
-				text-decoration: none;
-				font-size: 0.85rem;
-			}
+        &, &:hover {
+            color: inherit;
+            text-decoration: inherit;
+            transition: all 300ms ease;
+        }
 
-			&:hover {
-				cursor: pointer
-			}
+        &:hover {
+            transform: translateY(-2px);
+            transition: all 300ms ease;
+        }
 
-			p {
-				margin-bottom: 0;
-			}
-		}
-	}
+        &.category-security {
+            border-top: 3px solid $border-category-security;
+        }
+        
+        &.category-tutorial {
+            border-top: 3px solid $border-category-tutorial;
+        }
+        
+        &.category-opinion {
+            border-top: 3px solid $border-category-opinion;
+        }
+        
+        &.category-write-up {
+            border-top: 3px solid $border-category-write-up;
+        }
+        
+        &.category-opensource {
+            border-top: 3px solid $border-category-opensource;
+        }
 
-	h3 {
-		font-size: $font-size-large;
-		font-weight: bold;
-		color: white;
-	}
-
-	section {
-		p {
-			font-size: $font-size-medium;
-			font-weight: 300;
-			margin-bottom: 0;
-		}
-	
-		ul {
-			& {
-				margin-top: 10px;
-				font-weight: 300;
-				font-size: $font-size-medium;
-			}
-
-			&.columns-2 {
-				columns: 2;
-				column-count: 2;	
-			}
-		}
-	
-		li {
-			list-style-image: url("../../assets/img/bullet.png");
-			margin-bottom: 8px;
-		}
-
-		h3.title {
-			& {
-				position: relative;
-				z-index: 1;
-				overflow: hidden;
-				text-align: center;
-				margin: 50px 0;
-			}
-
-			&:before, &:after {
-				position: absolute;
-				top: 51%;
-				overflow: hidden;
-				width: 49%;
-				height: 1px;
-				content: '\a0';
-				background-color: rgba(255, 255, 255, 0.25);
-			}
-
-			&:before {
-				margin-left: -50%;
-			}
-
-			&:after {
-				margin-left: 1%;
-			}
-		}
-
-		&#contact {
-			& {
-				text-align: center;
-			}
-
-			form {
-				margin: 0 auto;
-				margin-top: 30px;
-				max-width: 600px;
-			}
-			
-			input, textarea {
-				width: 100%;
-				padding: 10px;
-				margin-bottom: 20px;
-			}
-			
-			input, textarea {
-				border: none;
-				border-radius: 3px;
-				background-color: $form-color;
-				color: white;
-			}
-			
-			input::placeholder, textarea::placeholder {
-				color: $placeholder-color;
-			}
-			
-			input {
-				height: 40px;
-			}
-			
-			textarea {
-				display: block;
-				resize: none;
-				height: 150px;
-			}
-		}
-	}
-
-	.experience-item {
-		& {
-			width: 100%;
-		}
-
-		small {
-			color: rgba(255, 255, 255, 0.75);
-			font-size: $font-size-base;
-			font-weight: 300;
-		}
-
-		ul {
-			margin: 10px 0 25px 0;
-		}
-	}
-
-	.project {
-		& {
-			margin-bottom: 50px;
-		}
-
-		img {
-			width: 100%;
-		}
-
-		h3 i {
-			font-size: $font-size-base;
-			color: rgba(255, 255, 255, 0.5);
-		}
-
-		h4 {
-			margin-top: 15px;
-		}
-	}
+        .card-title {
+            color: $font-primary;
+            font-family: 'Roboto Mono', monospace;
+            font-size: $font-size-small;
+            font-style: normal;
+            font-weight: 300;
+            margin: 0px;
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
 }

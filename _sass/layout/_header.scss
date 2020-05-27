@@ -1,10 +1,37 @@
-.header {
-	position: relative;
-}
+#header {
+    & {
+        color: white;
+    }
 
-.header-absolute {
-	position: absolute;
-	right: 0;
-	left: 0;
-	color: white;
+    a {
+        color: inherit;
+    }
+
+    .navbar-brand {
+        padding-bottom: 0px;
+    }
+
+    .nav-item {
+        & {
+            font-size: 0.95rem;
+            font-weight: 300;
+            padding: 0.5rem 1.5rem;
+        }
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        &#allCategory {
+            border-bottom: 3px solid $border-category-all;
+        }
+
+        &#tutorialCategory {
+            border-bottom: 3px solid $border-category-tutorial;
+        }
+    
+        &#securityCategory {
+            border-bottom: 3px solid $border-category-security;
+        }
+    }
 }
