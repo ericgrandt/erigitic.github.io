@@ -1,3 +1,1 @@
-# personal-theme
-
-Jekyll theme for my personal website.
+Repository for my personal website
